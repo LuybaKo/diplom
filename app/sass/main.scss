@@ -1,0 +1,607 @@
+@import "fonts";
+@import "libs";
+@import "base";
+@import "vars";
+
+// Пользовательские стили
+// ------------------------------------
+// NAVIGATION
+// -------------------------------------
+nav {
+    padding: 20px 0px;
+    font-size: 16px;
+
+    a:hover {
+        color: $blue;
+    }
+
+    .button {
+        background-color: $blue;
+
+        i {
+            margin-right: 12px;
+        }
+    }
+
+    .nav-link {
+        padding: .5rem 1.25rem;
+        color: $title;
+    }
+
+    .navigation-links,
+    .navigation-info,
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.navigation-info {
+    .nav-link:first-child {
+        color: #b5b5b6;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+.burger-menu {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.burger-menu__line {
+    width: 20px;
+    height: 2px;
+    background-color: $title;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-4px, 4px);
+    transform: rotate(-45deg) translate(-4px, 4px);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-3px, -3px);
+    transform: rotate(45deg) translate(-3px, -3px);
+}
+
+.logotip {
+    text-transform: uppercase;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+//// ------------------------------------
+// HEADER
+// --------------------------------------
+.header {
+    background-image: url(../img/bg-mountains.jpg);
+    background-position: center;
+    background-size: cover;
+
+    .button {
+        margin: 52px 0px;
+        color: #000;
+        border: 1px solid #dfdfe1;
+
+        i {
+            margin-right: 12px;
+        }
+    }
+}
+
+.head-title {
+    padding-top: 80px 0px 20px;
+}
+
+.head-paragraph {
+    margin: 0px auto;
+    max-width: 800px;
+    color: $text-color;
+}
+
+.phone-section {
+    img {
+        max-width: 100%;
+    }
+}
+
+//// ------------------------------------
+// FEATURES
+// --------------------------------------
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 100px;
+    padding: 80px 0 120px;
+    border-bottom: 1px solid #dfdfe1;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 80px;
+    }
+}
+
+.feature {
+    margin-left: 30px;
+    font-size: 18px;
+    color: $text-color;
+
+    .feature__title {
+        padding: 30px 0px;
+        font-size: 26px;
+        font-weight: lighter;
+    }
+}
+
+//// ------------------------------------
+// PHONE FEATURES
+// --------------------------------------
+.phone-features {
+    margin: 120px 0px;
+    background-image: url(../img/phone2.jpg);
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+   }
+
+.phone-feature {
+    margin: 130px 0px 140px;
+}
+
+.title {
+    font-family: $varela;
+    font-size: 42px;
+    color: $title;
+}
+
+.paragraph {
+    margin: 50px 0;
+    color: $text-color;
+}
+
+.double-buttons {
+    display: flex;
+
+    .button:first-child {
+        margin-right: 20px;
+        color: #fff;
+        background-color: $blue;
+
+        i {
+            margin-left: 45px;
+        }
+    }
+
+    .button {
+        color: #000;
+        border: 1px solid #dfdfe1;
+    }
+}
+
+//// ------------------------------------
+// MAP FEATURES
+// --------------------------------------
+.map-features {
+    margin: 50px 0 150px;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
+    background-position: 600px 0;
+    background-size: contain;
+}
+
+.partners {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+
+.partner-icons {
+    display: flex;
+    align-items: flex-end;
+
+    .dropbox {
+        margin-right: 27px;
+        font-size: 26px;
+        font-weight: bold;
+        color: $blue;
+    }
+
+    .evernote {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $green;
+
+        i {
+            font-size: 26px;
+            color: $text-color;
+        }
+    }
+}
+
+//// ------------------------------------
+// Interface
+// --------------------------------------
+
+.interface {
+    padding: 130px 0px;
+    background-color: $bg;
+
+    .title:first-child {
+        text-transform: capitalize;
+    }
+
+    .line {
+        margin: 40px auto;
+        width: 50px;
+        height: 2px;
+        background-color: $blue;
+    }
+
+    .introduction-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $text-color;
+
+        span {
+            font-size: 11px;
+            font-weight: bold;
+        }
+
+    }
+
+    .container:last-child {
+
+        .introduction-title {
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+.swipe-slider {
+    display:flex;
+    align-items: center;
+    padding: 40px 0px 180px;
+    overflow: hidden;
+}
+
+.form-for-recall {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    padding: 2px;
+    margin: 40px auto 60px;
+    border-radius: 25px;
+    border: 1px solid #dfdfe1;
+
+    input {
+        margin-left: 25px;
+        font-size: 16px;
+        border: none;
+        background-color: transparent;
+
+    }
+
+    .button {
+        background-color: $green;
+
+        i {
+            padding-left: 15px;
+        }
+    }
+}
+
+.appStore-link {
+    padding: 10px 25px;
+    margin: 0px auto;
+    width: 210px;
+    background-color: #000;
+    border-radius: 25px;
+
+    .appStore {
+        display: flex;
+        justify-content: space-around;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .appStore__text {
+        p {
+            margin: 0;
+            line-height: 1;
+        }
+
+        p:first-child {
+            font-size: 12px;
+        }
+
+        p:last-child {
+            font-size: 23px;
+        }
+    }
+
+    .appStore__icon {
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        font-size: 35px;
+    }
+}
+
+//// ------------------------------------
+// Slider Comments
+// --------------------------------------
+.slider-of-comments {
+    padding: 125px 0;
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 25px;
+        height: 40px;
+    }
+
+}
+
+.comment {
+    max-width: 580px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.foto-author {
+    max-width: 130px;
+    height: auto;
+    margin: 0 auto;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.losung {
+    margin-top: 65px;
+    font-size: 32px;
+    font-weight: lighter;
+    color: $title;
+}
+
+.stars {
+    i {
+        color: #f2bc3b;
+    }
+}
+
+.author {
+    margin-top: 60px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #26272d;
+}
+
+//// ------------------------------------
+// Offer
+// --------------------------------------
+.offers {
+    padding: 190px 0;
+    background-color: $bg;
+}
+
+.select {
+    padding-right: 130px;
+
+    .title {
+        padding: 40px 0;
+        line-height: 1.25;
+    }
+}
+
+.client {
+    .you {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $title;
+    }
+}
+
+.choose-btn {
+    display: flex;
+    justify-content: space-between;
+    max-width: 260px;
+    padding: 3px;
+    border-radius: 25px;
+    border: 1px solid #dfdfe1;
+
+    .select-first {
+        padding: 15px 27px;
+        font-size: 16px;
+        color: $text-color;
+        background-color: transparent;
+        border: none;
+        border-radius: 25px;
+        box-shadow: 3px 3px 15px rgba(200, 201, 202, 0.5);
+        cursor: pointer;
+
+        &:hover {
+            color: $title;
+            background-color: #fff;
+        }
+    }
+
+    .select-second {
+        @extend .select-first;
+    }
+}
+
+.communication {
+    font-size: 16px;
+    color: $text-color;
+}
+
+.offer-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.offer {
+    padding: 55px 0 70px;
+
+    .offer__name {
+        margin-bottom: 20px;
+        font-size: 32px;
+        font-weight: 300;
+    }
+
+    .offer__prise {
+        display: inline-block;
+        padding: 7px 15px;
+        font-size: 11px;
+        font-weight: bold;
+        text-transform: uppercase;
+        border: 1px solid #dfdfe1;
+        border-radius: 25px;
+    }
+
+    .offer__slogan {
+        padding: 50px 75px 40px;
+        font-size: 20px;
+        color: $text-color;
+    }
+
+    .offer__description {
+        p {
+            font-size: 16px;
+            color: $title;
+        }
+
+        i {
+            margin-right: 5px;
+            color: $green;
+        }
+    }
+
+    &:first-child {
+        p:last-child {
+            visibility: hidden;
+        }
+    }
+
+    .button {
+        margin-top: 70px;
+        padding-left: 40px;
+        padding-right: 40px;
+        color: $blue;
+        border-color: $blue;
+    }
+}
+
+//// ------------------------------------
+// Mailing
+// --------------------------------------
+.mailing {
+    padding: 70px 0;
+    border-bottom: 1px solid #dfdfe1;
+
+    .form-for-recall {
+        margin-bottom: 25px;
+    }
+
+    .introduction-title {
+        font-size: 14px;
+        color: $text-color;
+    }
+}
+
+//// ------------------------------------
+// Footer
+// --------------------------------------
+.footer-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 80px 0px 120px;
+    border-bottom: 1px solid #dfdfe1;
+    
+
+    .paragraph {
+        max-width: 260px;
+        margin: 25px 0px;
+        font-size: 14px;
+    }
+
+    .appStore-link {
+        margin: 0;
+        margin-bottom: 35px;
+        padding: 10px;
+        border-radius: 7px;
+
+        .appStore__icon {
+            padding-right: 0px;
+        }
+    }
+}
+.social-icons{
+    font-size: 23px;
+    color: $text-color;
+    i{
+        margin-right: 17px;
+    }
+}
+.bloks-of-links{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.block-links{
+    p{
+        margin-bottom: 18px;
+        font-size: 16px;
+        a{
+            color: $text-color;
+            text-decoration: none;
+            &:hover{
+                color: $blue;
+            }
+        }
+    }
+.link-title{
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+}
+.copyright{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+.boss{
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+div{
+    display: inline-block;
+}
+img{
+    margin-top: -6px;
+}
+}
+
+@import "media"; // Всегда в конце
