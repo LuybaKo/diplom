@@ -22,6 +22,14 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jQuery": "^1.7.4"
-  }
+    "jquery": "^3.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuybaKo/diplom.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuybaKo/diplom/issues"
+  },
+  "homepage": "https://github.com/LuybaKo/diplom#readme"
 }
