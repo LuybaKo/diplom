@@ -16,8 +16,8 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 		integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<!-- <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" -->
+	<!-- integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="css/main.min.css">
 
 
@@ -36,10 +36,10 @@
 
 <body>
 	<!-- Navigation -->
-	<!-- <nav>
+	<nav>
 		<div class="container">
 			<div class="navigation-links">
-				<div class="burger-menu" onclick="myFunction(this)">
+				<div class="burger-menu" data-toggle=".container" id="sidebar-toggle" onclick="myFunction(this)">
 					<div class="burger-menu__line bar1"></div>
 					<div class="burger-menu__line bar2"></div>
 					<div class="burger-menu__line bar3"></div>
@@ -55,10 +55,20 @@
 				<button class="g--btn button" type="submit"><i class="fab fa-apple"></i>Get App</button>
 			</div>
 		</div>
-	</nav> -->
-	<div class="container">
-		<nav class="navbar navbar-expand-s navbar-light">
-			<button id="burger" class="navbar-toggler" type="button" onclick="" data-toggle="collapse"
+	</nav>
+	<div id="sidebar">
+		<div class="container">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Explore</a></li>
+				<li><a href="#">Users</a></li>
+				<li><a href="#">Sign Out</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- <div class="container">
+			<nav class="navbar navbar-expand-s navbar-light">
+				<button id="burger" class="navbar-toggler" type="button" onclick="" data-toggle="collapse"
 				data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -86,7 +96,7 @@
 				<a class="nav-link" href="#">Contacts</a>
 				<button class="g--btn button" type="submit"><i class="fab fa-apple"></i>Get App</button>
 			</div>
-		</nav>
+		</nav> -->
 
 
 	</div>
@@ -444,8 +454,6 @@
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 	</script>
 	<script src="js/scripts.min.js"></script>
-	<script src="js/common.js"></script>
-
 </body>
 
 </html>

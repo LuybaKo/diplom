@@ -35,6 +35,7 @@ nav {
         align-items: center;
         justify-content: space-between;
     }
+
 }
 
 .navigation-info {
@@ -85,6 +86,20 @@ nav {
     }
 }
 
+#sidebar {
+    display: none;
+
+    a {
+        font-size: 16px;
+        color: #26272d;
+    }
+
+    a:hover {
+        color: $blue;
+    }
+}
+
+
 //// ------------------------------------
 // HEADER
 // --------------------------------------
@@ -117,6 +132,7 @@ nav {
 .phone-section {
     img {
         max-width: 100%;
+        vertical-align: bottom;
     }
 }
 
@@ -129,6 +145,7 @@ nav {
     grid-column-gap: 100px;
     padding: 80px 0 120px;
     border-bottom: 1px solid #dfdfe1;
+
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
         grid-row-gap: 80px;
@@ -156,7 +173,7 @@ nav {
     background-position: 0 0;
     background-size: contain;
     background-repeat: no-repeat;
-   }
+}
 
 .phone-feature {
     margin: 130px 0px 140px;
@@ -275,7 +292,7 @@ nav {
 }
 
 .swipe-slider {
-    display:flex;
+    display: flex;
     align-items: center;
     padding: 40px 0px 180px;
     overflow: hidden;
@@ -536,7 +553,7 @@ nav {
     grid-template-columns: 1fr 1fr;
     padding: 80px 0px 120px;
     border-bottom: 1px solid #dfdfe1;
-    
+
 
     .paragraph {
         max-width: 260px;
@@ -555,53 +572,64 @@ nav {
         }
     }
 }
-.social-icons{
+
+.social-icons {
     font-size: 23px;
     color: $text-color;
-    i{
+
+    i {
         margin-right: 17px;
     }
 }
-.bloks-of-links{
+
+.bloks-of-links {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
-.block-links{
-    p{
+
+.block-links {
+    p {
         margin-bottom: 18px;
         font-size: 16px;
-        a{
+
+        a {
             color: $text-color;
             text-decoration: none;
-            &:hover{
+
+            &:hover {
                 color: $blue;
             }
         }
     }
-.link-title{
-    margin-bottom: 18px;
-    font-size: 12px;
-    font-weight: bold;
-    text-transform: uppercase;
+
+    .link-title {
+        margin-bottom: 18px;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
 }
-}
-.copyright{
+
+.copyright {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     padding: 25px 0;
 }
-.boss{
+
+.boss {
     float: left;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
-div{
-    display: inline-block;
-}
-img{
-    margin-top: -6px;
-}
+
+    div {
+        display: inline-block;
+    }
+
+    img {
+        margin-top: -6px;
+    }
 }
 
 @import "media"; // Всегда в конце

@@ -4,34 +4,32 @@ $(function () {
 
 });
 
+
 function myFunction(x) {
 	x.classList.toggle("change");
-}
-
-var burger = document.getElementById("burger");
-burger.onclick = function () {
-	var hiddenLinks = document.querySelectorAll(".hide");
-	for (var i = 0; i < hiddenLinks.length; i++) {
-		var hiddenLink = hiddenLinks[i];
-		if (hiddenLink.style.visibility === 'hidden') {
-			hiddenLink.style.visibility = 'visible';
-		} else {
-			hiddenLink.style.visibility = 'hidden';
-		}
+	
+	var hiddenLinks = document.getElementById("sidebar");
+	if (hiddenLinks.style.display === 'block') {
+		hiddenLinks.style.display = 'none';
+	} else {
+		hiddenLinks.style.display = 'block';
 	}
+	
+
 }
 
 
 
 
-// $(function() {      
-// 	//Enable swiping...
-// 	$("#test").swipe( {
-// 	  //Generic swipe handler for all directions
-// 	  swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-// 		$(this).text("You swiped " + direction );  
-// 	  },
-// 	  //Default is 75px, set to 0 for demo so any distance triggers swipe
-// 	   threshold:0
-// 	});
-//   });
+// var burger = document.getElementById("burger");
+// burger.onclick = function () {
+// 	var hiddenLinks = document.querySelectorAll(".hide");
+// 	for (var i = 0; i < hiddenLinks.length; i++) {
+// 		var hiddenLink = hiddenLinks[i];
+// 		if (hiddenLink.style.visibility === 'hidden') {
+// 			hiddenLink.style.visibility = 'visible';
+// 		} else {
+// 			hiddenLink.style.visibility = 'hidden';
+// 		}
+// 	}
+// }
