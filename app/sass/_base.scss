@@ -18,7 +18,7 @@ body {
 body {
 	font-size: 20px;
 	min-width: 320px;
-	position: relative;
+	// position: relative;
 	line-height: 1.5;
 	font-family: $lato;
 	overflow-x: hidden;
@@ -57,6 +57,7 @@ body {
 	line-height: 1.5;
 	border-radius: 1.25rem;
 	transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+	cursor: pointer;
 }
 
 a {
