@@ -142,6 +142,16 @@ nav {
     color: $text-color;
 }
 
+.video-wrapper {
+    display: none;
+
+    .video {
+        max-width: 600px;
+        height: auto;
+        max-height: 100%;
+    }
+}
+
 .phone-section {
     img {
         max-width: 100%;
@@ -158,11 +168,6 @@ nav {
     grid-column-gap: 100px;
     padding: 80px 0 120px;
     border-bottom: 1px solid #dfdfe1;
-
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        grid-row-gap: 80px;
-    }
 }
 
 .feature {
@@ -186,13 +191,19 @@ nav {
     background-position: 0 0;
     background-size: contain;
     background-repeat: no-repeat;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 .phone-feature {
-    margin: 130px 0px 140px;
+    margin: 40px 0px 140px 90px;
 }
 
 .title {
+    // margin-right: 75px;
     font-family: $varela;
     font-size: 42px;
     color: $title;
@@ -205,8 +216,10 @@ nav {
 
 .double-buttons {
     display: flex;
+    flex-wrap: wrap-reverse;
 
     .button:first-child {
+        margin-top: 20px;
         margin-right: 20px;
         color: #fff;
         background-color: $blue;
@@ -217,6 +230,8 @@ nav {
     }
 
     .button {
+        margin-top: 20px;
+        margin-right: 20px;
         color: #000;
         border: 1px solid #dfdfe1;
     }
@@ -231,6 +246,11 @@ nav {
     background-repeat: no-repeat;
     background-position: 600px 0;
     background-size: contain;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr minmax(700px, 1fr);
+    }
 }
 
 .partners {
@@ -243,7 +263,7 @@ nav {
 
 .partner-icons {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
 
     .dropbox {
         margin-right: 27px;
@@ -262,6 +282,22 @@ nav {
             color: $text-color;
         }
     }
+}
+
+.map {
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-gap: 10px;
+    // display:flex;
+
+    .point {
+        text-align: center;
+        margin-top: 40px;
+        width: 5px;
+        height: 5px;
+        background-color: $blue;
+    }
+
 }
 
 //// ------------------------------------
@@ -313,8 +349,9 @@ nav {
 
 .form-for-recall {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 500px;
+    max-width: 500px;
     padding: 2px;
     margin: 40px auto 60px;
     border-radius: 25px;
@@ -325,7 +362,7 @@ nav {
         font-size: 16px;
         border: none;
         background-color: transparent;
-
+        outline: none;
     }
 
     .button {
@@ -377,15 +414,79 @@ nav {
 //// ------------------------------------
 // Slider Comments
 // --------------------------------------
-.slider-of-comments {
+.slider {
     padding: 125px 0;
+    position: relative;
+    overflow: hidden;
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 25px;
-        height: 40px;
+    .slider__wrapper {
+        display: flex;
+        transition: transform 0.6s ease;
     }
 
+    .slider__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    // @media (min-width: 980px) {
+    //     .slider__item {
+    //         flex: 0 0 50%;
+    //         max-width: 50%;
+    //     }
+    // }
+
+    .slider__control {
+        position: absolute;
+        top: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        color: #fff;
+        text-align: center;
+        opacity: 0.5;
+        height: 50px;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, .5);
+    }
+
+    .slider__control_show {
+        display: flex;
+    }
+
+    .slider__control:hover,
+    .slider__control:focus {
+        color: #fff;
+        text-decoration: none;
+        outline: 0;
+        opacity: .9;
+    }
+
+    .slider__control_left {
+        left: 0;
+    }
+
+    .slider__control_right {
+        right: 0;
+    }
+
+    .slider__control::before {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: transparent no-repeat center center;
+        background-size: 100% 100%;
+    }
+
+    .slider__control_left::before {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+
+    .slider__control_right::before {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
 }
 
 .comment {
@@ -430,6 +531,11 @@ nav {
 .offers {
     padding: 190px 0;
     background-color: $bg;
+
+    .container {
+        display: grid;
+        grid-template-columns: minmax(150px, 500px) 1fr;
+    }
 }
 
 .select {
@@ -465,12 +571,13 @@ nav {
         background-color: transparent;
         border: none;
         border-radius: 25px;
-        box-shadow: 3px 3px 15px rgba(200, 201, 202, 0.5);
         cursor: pointer;
 
-        &:hover {
+        &:focus {
             color: $title;
             background-color: #fff;
+            outline: none;
+            box-shadow: 3px 3px 15px rgba(200, 201, 202, 0.5);
         }
     }
 
@@ -482,6 +589,12 @@ nav {
 .communication {
     font-size: 16px;
     color: $text-color;
+
+    a {
+        color: $blue;
+        text-decoration-line: underline;
+        text-decoration-color: $blue;
+    }
 }
 
 .offer-block {
@@ -509,7 +622,7 @@ nav {
     }
 
     .offer__slogan {
-        padding: 50px 75px 40px;
+        padding: 50px 80px 40px;
         font-size: 20px;
         color: $text-color;
     }
@@ -539,6 +652,10 @@ nav {
         color: $blue;
         border-color: $blue;
     }
+}
+
+.offer-block-company {
+    display: none;
 }
 
 //// ------------------------------------
@@ -588,10 +705,15 @@ nav {
 
 .social-icons {
     font-size: 23px;
-    color: $text-color;
 
-    i {
+    a {
         margin-right: 17px;
+        color: $text-color;
+        transition: .2s;
+    }
+
+    a:hover {
+        color: $blue;
     }
 }
 
@@ -625,13 +747,15 @@ nav {
 
 .copyright {
     display: flex;
+    flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
     padding: 25px 0;
 }
 
 .boss {
-    float: left;
+    display: flex;
+    align-items: center;
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;

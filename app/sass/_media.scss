@@ -8,13 +8,100 @@
 		width: 100%;
 		padding: 0 15px;
 	}
+
+	.map-features {
+		background-image: none;
+
+		.container {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.feature {
+		margin-left: 0;
+	}
+
+	.map {
+		// background-image: url(../img/map.jpg);
+		// background-repeat: no-repeat;
+		// background-position: center;
+		// background-size: contain;
+	}
+
+	.form-for-recall {
+		justify-content: center;
+
+		input {
+			margin-top: 10px;
+		}
+
+		.button {
+			margin: 10px 0px;
+		}
+	}
+
+	.select {
+		padding-right: 50px;
+	}
+
+	.offer {
+		.offer__slogan {
+			padding: 50px 10px 40px;
+		}
+	}
 }
 
 /**/
-
+@media only screen and (max-width : 1140px) {
+	.offers .container {
+		grid-template-columns: 1fr;
+	}
+}
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {}
+@media only screen and (max-width : 992px) {
+	.features {
+		grid-column-gap: 34px;
+	}
+
+	.features {
+		grid-template-columns: 1fr;
+		grid-column-gap: 50px;
+		grid-row-gap: 80px;
+	}
+
+	.phone-features {
+		background-image: none;
+
+		.container {
+			grid-template-columns: 1fr;
+		}
+
+		.phone-feature {
+			margin: 0;
+		}
+	}
+
+	.map-features {
+		margin-bottom: 120px;
+	}
+
+	.interface {
+		padding: 60px 0px 120px;
+	}
+
+	.swipe-slider {
+		padding-bottom: 120px;
+	}
+
+	.offers {
+		padding: 120px 0;
+	}
+
+	.features {
+		padding-bottom: 80px;
+	}
+}
 
 /**/
 
@@ -29,9 +116,73 @@
 	}
 
 	.navigation-info {
+
 		.nav-link,
-		.button{
+		.button {
 			display: none;
+		}
+	}
+
+	.footer-nav {
+		grid-template-columns: 1fr;
+	}
+
+	.find-us {
+		margin-bottom: 80px;
+		text-align: -webkit-center;
+	}
+
+	.bloks-of-links {
+		justify-items: center;
+	}
+
+	.boss {
+		margin: 30px 0px;
+	}
+}
+
+/**/
+@media only screen and (max-width : 590px) {
+	.offer-block {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.bloks-of-links {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+
+/**/
+@media only screen and (max-width : 400px) {
+	.bloks-of-links {
+		justify-content: space-between;
+	}
+
+	.block-links {
+		margin-right: 20px;
+	}
+
+}
+
+/* Custom, iPhone Retina */
+@media (min-width : 320px) and (max-width : 400px) {
+	.interface {
+		.form-for-recall {
+			display: grid;
+		}
+	}
+	.mailing {
+		.form-for-recall {
+			display: grid;
+			input{
+				text-align: center;
+				margin-left: 0;
+			}
 		}
 	}
 }
@@ -39,22 +190,14 @@
 /**/
 
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {}
-
-/**/
-
-
-/* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {}
-
-/**/
-
-
 /*==========  Mobile First  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width : 320px) {}
+@media only screen and (min-width : 320px) {
+	.phone-features {
+		margin: 45px 0;
+	}
+}
 
 /**/
 
