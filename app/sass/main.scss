@@ -11,14 +11,15 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
     padding: 15px 0;
+    width: 100%;
     background-color: #fff;
+    z-index: 1;
 }
 
 nav {
-    width: 100%;
     padding: 20px 0px;
+    width: 100%;
     font-size: 16px;
 
     a:hover {
@@ -42,9 +43,9 @@ nav {
     .navigation-info,
     .container {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
 
 }
@@ -67,9 +68,9 @@ nav {
 .burger-menu__line {
     width: 20px;
     height: 2px;
-    background-color: $title;
     margin: 3px 0;
     transition: 0.4s;
+    background-color: $title;
 }
 
 /* Rotate first bar */
@@ -94,6 +95,10 @@ nav {
 
     span {
         font-weight: bold;
+    }
+
+    a {
+        color: $title;
     }
 }
 
@@ -203,7 +208,6 @@ nav {
 }
 
 .title {
-    // margin-right: 75px;
     font-family: $varela;
     font-size: 42px;
     color: $title;
@@ -255,9 +259,8 @@ nav {
 
 .partners {
     margin-bottom: 20px;
-    font-weight: bold;
     font-size: 12px;
-
+    font-weight: bold;
 }
 
 
@@ -291,13 +294,11 @@ nav {
     // display:flex;
 
     .point {
-        text-align: center;
-        margin-top: 40px;
         width: 5px;
         height: 5px;
+        margin-top: 40px;
         background-color: $blue;
     }
-
 }
 
 //// ------------------------------------
@@ -337,11 +338,11 @@ nav {
             margin-bottom: 25px;
         }
     }
-
 }
 
 .swipe-slider {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 40px 0px 180px;
     overflow: hidden;
@@ -415,7 +416,7 @@ nav {
 // Slider Comments
 // --------------------------------------
 .slider {
-    padding: 125px 0;
+    padding: 120px 0;
     position: relative;
     overflow: hidden;
 
@@ -429,30 +430,19 @@ nav {
         max-width: 100%;
     }
 
-    // @media (min-width: 980px) {
-    //     .slider__item {
-    //         flex: 0 0 50%;
-    //         max-width: 50%;
-    //     }
-    // }
-
     .slider__control {
         position: absolute;
         top: 50%;
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        color: #fff;
         text-align: center;
-        opacity: 0.5;
+        width: 40px;
         height: 50px;
+        color: #fff;
+        opacity: 0.5;
         transform: translateY(-50%);
         background: rgba(0, 0, 0, .5);
-    }
-
-    .slider__control_show {
-        display: flex;
     }
 
     .slider__control:hover,
@@ -490,15 +480,15 @@ nav {
 }
 
 .comment {
+    margin: 0 auto;
     max-width: 580px;
     height: auto;
-    margin: 0 auto;
 }
 
 .foto-author {
+    margin: 0 auto;
     max-width: 130px;
     height: auto;
-    margin: 0 auto;
 
     img {
         border-radius: 50%;
@@ -559,8 +549,8 @@ nav {
 .choose-btn {
     display: flex;
     justify-content: space-between;
-    max-width: 260px;
     padding: 3px;
+    max-width: 260px;
     border-radius: 25px;
     border: 1px solid #dfdfe1;
 
@@ -686,8 +676,8 @@ nav {
 
 
     .paragraph {
-        max-width: 260px;
         margin: 25px 0px;
+        max-width: 260px;
         font-size: 14px;
     }
 
