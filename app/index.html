@@ -33,38 +33,37 @@
 
 <body>
 	<!-- Navigation -->
-	<nav>
-		<div class="fixed-menu-wrapper">
+	<nav class="fixed-menu-wrapper">
+		<div class="container">
+			<div class="navigation-links">
+				<div class="burger-menu" data-toggle=".container" id="sidebar-toggle" onclick="myFunction(this)">
+					<div class="burger-menu__line bar1"></div>
+					<div class="burger-menu__line bar2"></div>
+					<div class="burger-menu__line bar3"></div>
+				</div>
+				<a class="nav-link" href="#">Tour</a>
+				<a class="nav-link" href="#">Features</a>
+				<a class="nav-link" href="#">Pricing</a>
+			</div>
+			<div class="logotip"><a href="index.html"><span>new</span>providence</a></div>
+			<div class="navigation-info">
+				<a class="nav-link" href="#">Help</a>
+				<a class="nav-link" href="#">Contacts</a>
+				<button class="g--btn button" type="submit"><a href="https://www.apple.com/ru/ios/app-store/"
+						target="_blank"><i class="fab fa-apple"></i>Get App</a></button>
+			</div>
+		</div>
+		<div id="sidebar">
 			<div class="container">
-				<div class="navigation-links">
-					<div class="burger-menu" data-toggle=".container" id="sidebar-toggle" onclick="myFunction(this)">
-						<div class="burger-menu__line bar1"></div>
-						<div class="burger-menu__line bar2"></div>
-						<div class="burger-menu__line bar3"></div>
-					</div>
-					<a class="nav-link" href="#">Tour</a>
-					<a class="nav-link" href="#">Features</a>
-					<a class="nav-link" href="#">Pricing</a>
-				</div>
-				<div class="logotip"><a href="#"><span>new</span>providence</a></div>
-				<div class="navigation-info">
-					<a class="nav-link" href="#">Help</a>
-					<a class="nav-link" href="#">Contacts</a>
-					<button class="g--btn button" type="submit"><i class="fab fa-apple"></i>Get App</button>
-				</div>
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Explore</a></li>
+					<li><a href="#">Users</a></li>
+					<li><a href="#">Sign Out</a></li>
+				</ul>
 			</div>
 		</div>
 	</nav>
-	<div id="sidebar">
-		<div class="container">
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Explore</a></li>
-				<li><a href="#">Users</a></li>
-				<li><a href="#">Sign Out</a></li>
-			</ul>
-		</div>
-	</div>
 	<!-- Header -->
 	<header class="header text-center">
 		<div class="container">
@@ -78,9 +77,12 @@
 			<button id="play" class="g--btn button"><i class="fas fa-play"></i>Watch
 				Video</button>
 			<div id="bender" class="video-wrapper">
-				<video class="video" controls poster="img/im-back-baby.jpg" preload="none">
+				<!-- <iframe width="100%" height="480px" src="https://www.youtube.com/embed/PYo7b5MdHIs" frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen></iframe> -->
+				<!-- <video class="video" controls poster="" preload="none">
 					<source src="video/videoplay.mp4" type="video/mp4">
-				</video>
+				</video> -->
 			</div>
 			<div id="phone" class="phone-section">
 				<img src="img/phone.png" alt="phone">
@@ -97,16 +99,10 @@
 					</div>
 					<div class="feature__title">Real-time all the time</div>
 					<div class="feature__paragraph">Thus much I thought proper to tell you in relation to yourself, and
-						to the
-						trust
-						I
-						reposed in you.<br>
+						to the trust I reposed in you.<br>
 						<br>
 						Just then her head struck against the roof of the hall: in fact she was now more than nine feet
-						high, and
-						she
-						at
-						once took up the little golden key and hurried off to the garden door.</div>
+						high, and she at once took up the little golden key and hurried off to the garden door.</div>
 				</div>
 				<div class="feature">
 					<div class="feature__icon">
@@ -114,14 +110,10 @@
 					</div>
 					<div class="feature__title">Adopt without any obstacles</div>
 					<div class="feature__paragraph">This sounded a very good reason, and Alice was quite pleased to know
-						it. 'I
-						never
-						thought of that before!' she said.<br>
+						it. 'I never thought of that before!' she said.<br>
 						<br>
 						This I have produced as a scantling of Jack’s great eloquence and the force of his reasoning
-						upon such
-						abstruse
-						matters.</div>
+						upon such abstruse matters.</div>
 				</div>
 			</div>
 		</div>
@@ -138,8 +130,10 @@
 					ones, and the
 					birds have deserted them a long while.</div>
 				<div class="double-buttons">
-					<button class="g--btn button">Try to hack us<i class="fas fa-arrow-right"></i></button>
-					<button class="g--btn button"> Learn more</button>
+					<button class="g--btn button"><a href="#">Try to hack us<i
+								class="fas fa-arrow-right"></i></a></button>
+					<button class="g--btn button"><a href="files/Словарь программиста.docx" download>Learn
+							more</a></button>
 				</div>
 			</div>
 		</div>
@@ -213,7 +207,7 @@
 			<div class="line"></div>
 			<div class="introduction-title">Landing Screen</div>
 		</div>
-		<div id="test" class="swipe-slider text-center">
+		<div class="swipe-slider">
 			<div class="swipe-slide">
 				<img class="img-responsive" src="img/screen1.png" alt="">
 			</div>
@@ -234,14 +228,14 @@
 			<div class="introduction-title text-center"><span>New</span>Providence</div>
 			<h2 class="title text-center">Get it to your smartphone</h2>
 			<div class="recall ">
-				<form action="" class="form-for-recall">
+				<form action="" class="form-for-recall" onsubmit="alert('accepted!');return false">
 					<input type="text" value="denis@getcraftwork.com">
 					<button class="g--btn button">Send Invite<i class="fas fa-arrow-right"></i></button>
 				</form>
 			</div>
 			<div class="introduction-title text-center">or Download From</div>
 			<div class="appStore-link">
-				<a href="" target="_blank" class="appStore">
+				<a href="https://www.apple.com/ru/ios/app-store/" target="_blank" class="appStore" download>
 					<div class="appStore__icon"><i class="fab fa-apple"></i></div>
 					<div class="appStore__text">
 						<p>Download on the</p>
@@ -252,8 +246,7 @@
 		</div>
 	</section>
 	<!-- Slider with comments -->
-
-	<div class="slider">
+	<section class="slider">
 		<div class="slider__wrapper">
 			<div class="slider__item text-center">
 				<div class="comment">
@@ -318,87 +311,10 @@
 					<div class="author">Cameron Dowman</div>
 				</div>
 			</div>
-
 		</div>
 		<a class="slider__control slider__control_left" href="#" role="button"></a>
 		<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
-	</div>
-
-
-	<!-- <section class="slider">
-		<div class="container">
-			<div class="container text-center slider__wrapper">
-
-				<div class="slider__item">
-					<div class="comment">
-						<div class="foto-author">
-							<img src="img/author1.jpg" alt="Foto">
-						</div>
-						<div class="losung">New Providence is the great UI kit </div>
-						<div class="paragraph">“Just then her head struck against the roof of the hall: in fact she
-							was
-							now more than nine feet high, and she at once took up the little golden key and hurried
-							off
-							to the garden door.”</div>
-						<div class="stars">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<div class="author">Cameron Dowman</div>
-					</div>
-				</div>
-				<div class="slider__item">
-					<div class="comment">
-						<div class="foto-author">
-							<img src="img/author2.jpg" alt="Foto">
-						</div>
-						<div class="losung">New Providence is the great UI kit </div>
-						<div class="paragraph">“Just then her head struck against the roof of the hall: in fact she
-							was
-							now more than nine feet high, and she at once took up the little golden key and hurried
-							off
-							to the garden door.”</div>
-						<div class="stars">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<div class="author">Cameron Dowman</div>
-					</div>
-				</div>
-				<div class="slider__item">
-					<div class="comment">
-						<div class="foto-author">
-							<img src="img/author3.jpg" alt="Foto">
-						</div>
-						<div class="losung">New Providence is the great UI kit </div>
-						<div class="paragraph">“Just then her head struck against the roof of the hall: in fact she
-							was
-							now more than nine feet high, and she at once took up the little golden key and hurried
-							off
-							to the garden door.”</div>
-						<div class="stars">
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-							<i class="fas fa-star"></i>
-						</div>
-						<div class="author">Cameron Dowman</div>
-					</div>
-				</div>
-
-				<a class="slider__control slider__control_left" href="#" role="button"></a>
-				<a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
-			</div>
-		</div>
-	</section> -->
-
+	</section>
 	<!-- offer -->
 	<section id="offers" class="offers">
 		<div class="container">
@@ -472,9 +388,9 @@
 		<div class="container">
 			<h2 class="title text-center">Subscribe our newsletters</h2>
 			<div class="recall ">
-				<form action="" class="form-for-recall">
-					<input type="text" placeholder="Your e-mail">
-					<button class="g--btn button">Subscribe</button>
+				<form action="" name="mail" class="form-for-recall">
+					<input type="text" name="email" placeholder="Your e-mail">
+					<button class="g--btn button" type="submit" >Subscribe</button>
 				</form>
 			</div>
 			<div class="introduction-title text-center">We promise to never spam you.</div>
@@ -489,7 +405,7 @@
 					<div class="paragraph">It was some time before he obtained any answer, and the reply, when made, was
 						unpropitious.</div>
 					<div class="appStore-link">
-						<a href="https://www.apple.com/ru/ios/app-store/" target="_blank" class="appStore">
+						<a href="https://www.apple.com/ru/ios/app-store/" target="_blank" class="appStore" download>
 							<div class="appStore__icon"><i class="fab fa-apple"></i></div>
 							<div class="appStore__text">
 								<p>Download on the</p>

@@ -15,6 +15,7 @@
     width: 100%;
     background-color: #fff;
     z-index: 1;
+    opacity: .9;
 }
 
 nav {
@@ -31,6 +32,10 @@ nav {
 
         i {
             margin-right: 12px;
+        }
+
+        a {
+            color: #fff;
         }
     }
 
@@ -73,18 +78,15 @@ nav {
     background-color: $title;
 }
 
-/* Rotate first bar */
 .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-4px, 4px);
     transform: rotate(-45deg) translate(-4px, 4px);
 }
 
-/* Fade out the second bar */
 .change .bar2 {
     opacity: 0;
 }
 
-/* Rotate last bar */
 .change .bar3 {
     -webkit-transform: rotate(45deg) translate(-3px, -3px);
     transform: rotate(45deg) translate(-3px, -3px);
@@ -115,7 +117,6 @@ nav {
         color: $blue;
     }
 }
-
 
 //// ------------------------------------
 // HEADER
@@ -150,11 +151,11 @@ nav {
 .video-wrapper {
     display: none;
 
-    .video {
-        max-width: 600px;
-        height: auto;
-        max-height: 100%;
-    }
+    // .video {
+    //     max-width: 600px;
+    //     height: auto;
+    //     max-height: 100%;
+    // }
 }
 
 .phone-section {
@@ -225,8 +226,11 @@ nav {
     .button:first-child {
         margin-top: 20px;
         margin-right: 20px;
-        color: #fff;
         background-color: $blue;
+
+        a {
+            color: #fff;
+        }
 
         i {
             margin-left: 45px;
@@ -236,8 +240,11 @@ nav {
     .button {
         margin-top: 20px;
         margin-right: 20px;
-        color: #000;
         border: 1px solid #dfdfe1;
+
+        a {
+            color: #000;
+        }
     }
 }
 
@@ -347,6 +354,16 @@ nav {
     padding: 40px 0px 180px;
     overflow: hidden;
 }
+
+.swipe-slide {
+    transition: .5s linear;
+
+    &:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
 
 .form-for-recall {
     display: flex;
@@ -594,6 +611,13 @@ nav {
 
 .offer {
     padding: 55px 0 70px;
+    transition: .5s linear;
+
+    &:hover {
+        background-color: #fff;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 
     .offer__name {
         margin-bottom: 20px;
@@ -612,7 +636,7 @@ nav {
     }
 
     .offer__slogan {
-        padding: 50px 80px 40px;
+        padding: 50px 84px 40px;
         font-size: 20px;
         color: $text-color;
     }
@@ -648,6 +672,14 @@ nav {
     display: none;
 }
 
+.error input {
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
+}
+
 //// ------------------------------------
 // Mailing
 // --------------------------------------
@@ -657,12 +689,24 @@ nav {
 
     .form-for-recall {
         margin-bottom: 25px;
+
+        input {
+            background-color: #fff;
+        }
     }
 
     .introduction-title {
         font-size: 14px;
         color: $text-color;
     }
+}
+
+.error input {
+    border: 1px solid red;
+}
+
+.error {
+    color: red;
 }
 
 //// ------------------------------------
