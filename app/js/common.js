@@ -194,14 +194,14 @@ var slider = multiItemSlider('.slider')
 // switch points on map
 // -------------------
 
-// var timerId = setInterval(switchDots, 1000);
+var timerId = setInterval(switchDots, 1000);
 
-// function switchDots(){
-//   var parentDOM = document.getElementById("map");
-//   var dots = parentDOM.getElementsByClassName("point");
-//   var rand = Math.floor(Math.random() * dots.length);
-//   dots[rand].classList.toggle('blue');
-// }
+function switchDots(){
+  var parentDOM = document.getElementById("map");
+  var dots = parentDOM.getElementsByClassName("point");
+  var rand = Math.floor(Math.random() * dots.length);
+  dots[rand].classList.toggle('blue');
+}
 
 // -------------
 // SWIPE-slider
