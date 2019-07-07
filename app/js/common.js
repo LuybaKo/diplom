@@ -1,9 +1,6 @@
-$(function () {
-
-});
 'use strict';
 
-
+// menu
 function myFunction(x) {
   x.classList.toggle("change");
   var hiddenLinks = document.getElementById("sidebar");
@@ -14,8 +11,7 @@ function myFunction(x) {
   }
 }
 
-
-
+// show video on pushing button
 var watch = document.getElementById("play");
 watch.onclick = function showVideo() {
   var video = document.getElementById("bender");
@@ -33,7 +29,7 @@ watch.onclick = function showVideo() {
   }
 }
 
-
+// choise your programm
 function select() {
   var offer1 = document.getElementsByClassName('offer-block-company');
   var offer2 = document.getElementsByClassName('offer-block-individual');
@@ -60,16 +56,17 @@ var form = document.forms['mail'];
 form.onsubmit = function (e) {
   checkEmail(e.target.elements['email']);
   validateEmail(e.target.elements['email']);
-  if( mail.style.borderColor === 'red'){
-    return false;     
-  }alert("accepted!!!");
+  if (mail.style.borderColor === 'red') {
+    return false;
+  }
+  alert("accepted!!!");
 }
 
 
 function checkEmail(email) {
   if (!email.value) {
     mail.style.borderColor = 'red';
-  } 
+  }
 }
 
 function validateEmail(email) {
@@ -192,15 +189,32 @@ var multiItemSlider = (function () {
 
 var slider = multiItemSlider('.slider')
 
-// var burger = document.getElementById("burger");
-// burger.onclick = function () {
-// 	var hiddenLinks = document.querySelectorAll(".hide");
-// 	for (var i = 0; i < hiddenLinks.length; i++) {
-// 		var hiddenLink = hiddenLinks[i];
-// 		if (hiddenLink.style.visibility === 'hidden') {
-// 			hiddenLink.style.visibility = 'visible';
-// 		} else {
-// 			hiddenLink.style.visibility = 'hidden';
-// 		}
-// 	}
+
+// ------------------
+// switch points on map
+// -------------------
+
+// var timerId = setInterval(switchDots, 1000);
+
+// function switchDots(){
+//   var parentDOM = document.getElementById("map");
+//   var dots = parentDOM.getElementsByClassName("point");
+//   var rand = Math.floor(Math.random() * dots.length);
+//   dots[rand].classList.toggle('blue');
 // }
+
+// -------------
+// SWIPE-slider
+// -------------
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+
+

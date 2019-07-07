@@ -14,7 +14,7 @@
     padding: 15px 0;
     width: 100%;
     background-color: #fff;
-    z-index: 1;
+    z-index: 15;
     opacity: .9;
 }
 
@@ -295,15 +295,37 @@ nav {
 }
 
 .map {
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    // grid-gap: 10px;
-    // display:flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+
 
     .point {
         width: 5px;
         height: 5px;
         margin-top: 40px;
+    }
+
+}
+
+.blue {
+    animation: color-change 1s .5s;
+}
+
+.bbb {
+    background-color: $blue;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: $blue;
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    100% {
         background-color: $blue;
     }
 }
@@ -347,7 +369,7 @@ nav {
     }
 }
 
-.swipe-slider {
+.screens {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -355,7 +377,7 @@ nav {
     overflow: hidden;
 }
 
-.swipe-slide {
+.screen {
     transition: .5s linear;
 
     &:hover {
@@ -427,6 +449,36 @@ nav {
         padding-right: 10px;
         font-size: 35px;
     }
+}
+
+.swiper-container {
+    max-width: 600px;
+    height: auto;
+}
+
+.swiper-slide {
+    padding: 0 20px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 40px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, .5);
+
+    &:hover {
+        opacity: .9;
+    }
+}
+
+.swiper-button-prev {
+    left: 0;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.swiper-button-next {
+    right: 0;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
 
 //// ------------------------------------
@@ -670,14 +722,6 @@ nav {
 
 .offer-block-company {
     display: none;
-}
-
-.error input {
-    border: 1px solid red;
-}
-
-.error {
-    color: red;
 }
 
 //// ------------------------------------

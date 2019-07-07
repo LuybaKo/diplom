@@ -9,6 +9,10 @@
 		padding: 0 15px;
 	}
 
+	.fixed-menu-wrapper {
+		padding: 5px 0;
+	}
+
 	.map-features {
 		background-image: none;
 
@@ -21,23 +25,12 @@
 		margin-left: 0;
 	}
 
-	.map {
-		// background-image: url(../img/map.jpg);
-		// background-repeat: no-repeat;
-		// background-position: center;
-		// background-size: contain;
-	}
-
 	.form-for-recall {
-		justify-content: center;
 
 		input {
 			margin-top: 10px;
 		}
 
-		.button {
-			margin: 10px 0px;
-		}
 	}
 
 	.select {
@@ -90,8 +83,13 @@
 		padding: 60px 0px 120px;
 	}
 
-	.swipe-slider {
+	.screens {
 		padding-bottom: 120px;
+		flex-wrap: wrap;
+	}
+
+	.screen {
+		margin: 20px 85px;
 	}
 
 	.offers {
@@ -139,13 +137,18 @@
 	.boss {
 		margin: 30px 0px;
 	}
-	.comment{
-		.losung{
+
+	.comment {
+		.losung {
 			padding: 0px 40px;
 		}
-		.paragraph{
+
+		.paragraph {
 			padding: 0px 40px;
 		}
+	}
+	.swiper-slide {
+		padding: 0 50px;
 	}
 }
 
@@ -153,6 +156,24 @@
 @media only screen and (max-width : 590px) {
 	.offer-block {
 		grid-template-columns: 1fr;
+	}
+	.map-features {
+		margin-bottom: 80px;
+	}
+	.interface {
+		padding: 60px 0 80px;
+	}
+	.slider {
+		padding: 80px 0;
+	}
+	.offers {
+		padding: 60px 0 20px;
+	}
+	.mailing {
+		padding-top: 60px;
+	}
+	.footer-nav {
+		padding: 80px 0 80px;
 	}
 }
 
@@ -162,6 +183,14 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
+	}
+
+	.form-for-recall {
+		justify-content: center;
+	}
+
+	.screen {
+		margin: 20px 40px;
 	}
 }
 
@@ -184,10 +213,12 @@
 			display: grid;
 		}
 	}
+
 	.mailing {
 		.form-for-recall {
 			display: grid;
-			input{
+
+			input {
 				text-align: center;
 				margin-left: 0;
 			}
