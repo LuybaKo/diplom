@@ -18,7 +18,6 @@ watch.onclick = function showVideo() {
   var phone = document.getElementById("phone");
   if (video.style.display === 'block') {
     video.style.display = 'none';
-
   } else {
     video.style.display = 'block';
   }
@@ -61,11 +60,21 @@ form.onsubmit = function (e) {
   }
   alert("accepted!!!");
 }
-
+var form_invite = document.forms['invite'];
+form_invite.onsubmit = function (e) {
+  checkEmail(e.target.elements['email']);
+  validateEmail(e.target.elements['email']);
+  if (invite.style.borderColor === 'red') {
+    return false;
+  }
+  alert("accepted!!!");
+}
 
 function checkEmail(email) {
   if (!email.value) {
     mail.style.borderColor = 'red';
+    email.style.borderColor = 'red';
+    invite.style.borderColor = 'red';
   }
 }
 
@@ -73,8 +82,12 @@ function validateEmail(email) {
   var re = /^[a-z][a-zA-Z0-9_.]*(\.[a-zA-Z][a-zA-Z0-9_.]*)?@[a-z][a-zA-Z-0-9]*\.[a-z]+(\.[a-z]+)?$/;
   if (!re.test(email.value)) {
     mail.style.borderColor = 'red';
+    email.style.borderColor = 'red';
+    invite.style.borderColor = 'red';
   } else {
     mail.style.borderColor = '#dfdfe1';
+    email.style.borderColor = 'red';
+    invite.style.borderColor = '#dfdfe1';
   }
 }
 
@@ -84,22 +97,20 @@ function validateEmail(email) {
 var multiItemSlider = (function () {
   return function (selector, config) {
     var
-      _mainElement = document.querySelector(selector), // основный элемент блока
-      _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
-      _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
-      _sliderControls = _mainElement.querySelectorAll('.slider__control'), // элементы управления
-      _sliderControlLeft = _mainElement.querySelector('.slider__control_left'), // кнопка "LEFT"
-      _sliderControlRight = _mainElement.querySelector('.slider__control_right'), // кнопка "RIGHT"
-      _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
-      _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента    
-      _positionLeftItem = 0, // позиция левого активного элемента
-      _transform = 0, // значение транфсофрмации .slider_wrapper
-      _step = _itemWidth / _wrapperWidth * 100, // величина шага (для трансформации)
-      _items = []; // массив элементов
+      mainElement = document.querySelector(selector), // основный элемент блока
+      sliderWrapper = mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+      sliderItems = mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+      sliderControls = mainElement.querySelectorAll('.slider__control'), // элементы управления
+      wrapperWidth = parseFloat(getComputedStyle(sliderWrapper).width), // ширина обёртки
+      itemWidth = parseFloat(getComputedStyle(sliderItems[0]).width), // ширина одного элемента    
+      positionLeftItem = 0, // позиция левого активного элемента
+      transform = 0, // значение транфсофрмации .slider_wrapper
+      step = itemWidth / wrapperWidth * 100, // величина шага (для трансформации)
+      items = []; // массив элементов
 
     // наполнение массива _items
-    _sliderItems.forEach(function (item, index) {
-      _items.push({
+    sliderItems.forEach(function (item, index) {
+      items.push({
         item: item,
         position: index,
         transform: 0
@@ -109,8 +120,8 @@ var multiItemSlider = (function () {
     var position = {
       getItemMin: function () {
         var indexItem = 0;
-        _items.forEach(function (item, index) {
-          if (item.position < _items[indexItem].position) {
+        items.forEach(function (item, index) {
+          if (item.position < items[indexItem].position) {
             indexItem = index;
           }
         });
@@ -118,69 +129,69 @@ var multiItemSlider = (function () {
       },
       getItemMax: function () {
         var indexItem = 0;
-        _items.forEach(function (item, index) {
-          if (item.position > _items[indexItem].position) {
+        items.forEach(function (item, index) {
+          if (item.position > items[indexItem].position) {
             indexItem = index;
           }
         });
         return indexItem;
       },
       getMin: function () {
-        return _items[position.getItemMin()].position;
+        return items[position.getItemMin()].position;
       },
       getMax: function () {
-        return _items[position.getItemMax()].position;
+        return items[position.getItemMax()].position;
       }
     }
 
-    var _transformItem = function (direction) {
+    var transformItem = function (direction) {
       var nextItem;
       if (direction === 'right') {
-        _positionLeftItem++;
-        if ((_positionLeftItem + _wrapperWidth / _itemWidth - 1) > position.getMax()) {
+        positionLeftItem++;
+        if ((positionLeftItem + wrapperWidth / itemWidth - 1) > position.getMax()) {
           nextItem = position.getItemMin();
-          _items[nextItem].position = position.getMax() + 1;
-          _items[nextItem].transform += _items.length * 100;
-          _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+          items[nextItem].position = position.getMax() + 1;
+          items[nextItem].transform += items.length * 100;
+          items[nextItem].item.style.transform = 'translateX(' + items[nextItem].transform + '%)';
         }
-        _transform -= _step;
+        transform -= step;
       }
       if (direction === 'left') {
-        _positionLeftItem--;
-        if (_positionLeftItem < position.getMin()) {
+        positionLeftItem--;
+        if (positionLeftItem < position.getMin()) {
           nextItem = position.getItemMax();
-          _items[nextItem].position = position.getMin() - 1;
-          _items[nextItem].transform -= _items.length * 100;
-          _items[nextItem].item.style.transform = 'translateX(' + _items[nextItem].transform + '%)';
+          items[nextItem].position = position.getMin() - 1;
+          items[nextItem].transform -= items.length * 100;
+          items[nextItem].item.style.transform = 'translateX(' + items[nextItem].transform + '%)';
         }
-        _transform += _step;
+        transform += step;
       }
-      _sliderWrapper.style.transform = 'translateX(' + _transform + '%)';
+      sliderWrapper.style.transform = 'translateX(' + transform + '%)';
     }
 
     // обработчик события click для кнопок "назад" и "вперед"
-    var _controlClick = function (e) {
+    var controlClick = function (e) {
       var direction = this.classList.contains('slider__control_right') ? 'right' : 'left';
+      transformItem(direction);
       e.preventDefault();
-      _transformItem(direction);
     };
 
-    var _setUpListeners = function () {
-      // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
-      _sliderControls.forEach(function (item) {
-        item.addEventListener('click', _controlClick);
+    var setUpListeners = function () {
+      // добавление к кнопкам "назад" и "вперед" обрботчика controlClick для событя click
+      sliderControls.forEach(function (item) {
+        item.addEventListener('click', controlClick);
       });
     }
 
     // инициализация
-    _setUpListeners();
+    setUpListeners();
 
     return {
       right: function () { // метод right
-        _transformItem('right');
+        transformItem('right');
       },
       left: function () { // метод left
-        _transformItem('left');
+        transformItem('left');
       }
     }
 

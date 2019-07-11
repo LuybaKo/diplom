@@ -7,7 +7,7 @@
 	<title>Title</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon.ico">
 
 	<link href="https://fonts.googleapis.com/css?family=Lato|Varela+Round&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -54,8 +54,15 @@
 				<ul>
 					<li><a href="#">Home</a></li>
 					<li><a href="#">Explore</a></li>
-					<li><a href="#">Users</a></li>
+					<li class="hide"><a href="#">Tour</a></li>
+					<li class="hide"><a href="#">Pricing</a></li>
+					<li class="hide"><a href="#">Features</a></li>
+					<li class="hide"><a href="#">Pricing</a></li>
+					<li class="hide"><a href="#">Help</a></li>
+					<li class="hide"><a href="#">Contacts</a></li>
 					<li><a href="#">Sign Out</a></li>
+					<button class="g--btn button hide" type="submit"><a href="https://www.apple.com/ru/ios/app-store/"
+						target="_blank"><i class="fab fa-apple"></i>Get App</a></button>
 				</ul>
 			</div>
 		</div>
@@ -238,9 +245,9 @@
 			<div class="introduction-title text-center"><span>New</span>Providence</div>
 			<h2 class="title text-center">Get it to your smartphone</h2>
 			<div class="recall ">
-				<form action="" class="form-for-recall" onsubmit="alert('accepted!');return false">
-					<input type="text" value="denis@getcraftwork.com">
-					<button class="g--btn button">Send Invite<i class="fas fa-arrow-right"></i></button>
+				<form action="" name="invite" class="form-for-recall">
+					<input type="text" name="email" placeholder="denis@getcraftwork.com">
+					<button type="submit" class="g--btn button">Send Invite<i class="fas fa-arrow-right"></i></button>
 				</form>
 			</div>
 			<div class="introduction-title text-center">or Download From</div>

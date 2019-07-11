@@ -20,20 +20,13 @@
 			grid-template-columns: 1fr;
 		}
 	}
-	.map{
+
+	.map {
 		display: none;
 	}
 
 	.feature {
 		margin-left: 0;
-	}
-
-	.form-for-recall {
-
-		input {
-			margin-top: 10px;
-		}
-
 	}
 
 	.select {
@@ -114,6 +107,11 @@
 		.nav-link {
 			display: none;
 		}
+
+	}
+
+	.hide {
+		display: block;
 	}
 
 	.navigation-info {
@@ -150,6 +148,7 @@
 			padding: 0px 40px;
 		}
 	}
+
 	.swiper-slide {
 		padding: 0 50px;
 	}
@@ -160,21 +159,27 @@
 	.offer-block {
 		grid-template-columns: 1fr;
 	}
+
 	.map-features {
 		margin-bottom: 80px;
 	}
+
 	.interface {
 		padding: 60px 0 80px;
 	}
+
 	.slider {
 		padding: 80px 0;
 	}
+
 	.offers {
 		padding: 60px 0 20px;
 	}
+
 	.mailing {
 		padding-top: 60px;
 	}
+
 	.footer-nav {
 		padding: 80px 0 80px;
 	}
@@ -183,13 +188,23 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 	.bloks-of-links {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-around;
+		grid-template-columns: 1fr;
+		justify-items: flex-start;
+		margin-left: 5%;
 	}
 
 	.form-for-recall {
+		display: grid;
 		justify-content: center;
+		border: none;
+		input{
+			margin-bottom: 10px;
+			margin-left: 0;
+			padding: 10px 5px;
+			text-align: center;
+			border-radius: 25px;
+			border: 1px solid #dfdfe1;
+		}
 	}
 
 	.screen {
@@ -199,10 +214,6 @@
 
 /**/
 @media only screen and (max-width : 400px) {
-	.bloks-of-links {
-		justify-content: space-between;
-	}
-
 	.block-links {
 		margin-right: 20px;
 	}
@@ -211,21 +222,9 @@
 
 /* Custom, iPhone Retina */
 @media (min-width : 320px) and (max-width : 400px) {
-	.interface {
-		.form-for-recall {
-			display: grid;
-		}
-	}
-
-	.mailing {
-		.form-for-recall {
-			display: grid;
-
-			input {
-				text-align: center;
-				margin-left: 0;
-			}
-		}
+	
+	.double-buttons{
+		justify-content: center;
 	}
 }
 

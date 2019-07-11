@@ -108,6 +108,15 @@ nav {
     display: none;
     margin-top: 25px;
 
+    ul {
+        margin: 0;
+        list-style-type: none;
+    }
+
+    li {
+        padding: 5px 0;
+    }
+
     a {
         font-size: 16px;
         color: #26272d;
@@ -116,6 +125,19 @@ nav {
     a:hover {
         color: $blue;
     }
+
+    .button {
+        margin-left: -20px;
+        margin-top: 10px;
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.hide {
+    display: none;
 }
 
 //// ------------------------------------
@@ -313,38 +335,47 @@ nav {
         grid-column-start: 3;
         grid-column-end: 4;
     }
+
     .point2 {
         grid-column-start: 6;
         grid-column-end: 7;
     }
+
     .point3 {
         grid-column-start: 10;
         grid-column-end: 11;
     }
-    .point4{
+
+    .point4 {
         grid-column-start: 9;
         grid-column-end: 11;
     }
-    .point5{
+
+    .point5 {
         grid-column-start: 3;
         grid-column-end: 4;
     }
-    .point6{
+
+    .point6 {
         grid-column-start: 8;
         grid-column-end: 9;
     }
-    .point7{
+
+    .point7 {
         grid-column-start: 3;
         grid-column-end: 4;
     }
-    .point8{
+
+    .point8 {
         @extend .point6;
     }
-    .point9{
+
+    .point9 {
         grid-column-start: 4;
         grid-column-end: 5;
     }
-    .point10{
+
+    .point10 {
         grid-column-start: 5;
         grid-column-end: 6;
     }
